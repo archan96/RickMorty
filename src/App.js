@@ -65,7 +65,7 @@ function App() {
         return item.episode;
       });
 
-    console.log(urls);
+    // console.log(urls);
 
     urls = urls.flat();
 
@@ -76,7 +76,7 @@ function App() {
       return res.data;
     });
     Promise.all(promises).then((data) => {
-      console.log(data);
+      // console.log(data);
       setchapters(data);
     });
 
@@ -120,25 +120,26 @@ function App() {
     getPhotos(page);
   };
 
-  useEffect(() => {
-    // getDimention();
-    // console.log(uniqueNames);
-    scrollHandle();
-    // console.log(data);
-    // getPhotos(page);
-    return () => {
-      console.log("unmount");
-    };
-  }, []);
+  // useEffect(() => {
+  //   getChapters();
+  //   scrollHandle();
+  //   getDimension();
+  //   getChapters();
+  //   return () => {
+  //     console.log("unmount");
+  //   };
+  // }, []);
 
   useEffect(() => {
-    console.log(chapters);
+    scrollHandle();
     getDimension();
     getChapters();
+
     return () => {
       console.log("unmount");
     };
   }, [selected]);
+
   /** load data in state */
   /** load data in state */
 
@@ -194,9 +195,8 @@ function App() {
                 <div className="chapters">
                   {chapters.map((item, index) => (
                     <p className="rText chaptersTXT" key={index}>
-                      {" "}
+                      {index > 1 && ", "}
                       {item.name}
-                      {", "}
                     </p>
                   ))}
                 </div>

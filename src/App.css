@@ -118,15 +118,15 @@
 
 .rAvtar {
   margin-top: 5vh;
-  width: 12vw;
-  height: 12vw;
-  border-radius: 6vw;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 10vh;
   align-self: center;
 }
 
 .rName {
-  font-size: 1.5vw;
-  line-height: 1.5vw;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
   font-weight: bold;
 }
 
@@ -139,6 +139,13 @@
 .chaptersTXT {
   text-align: center;
   float: left;
+}
+
+.rText{
+  font-size: 2vh;
+  line-height: 2vh;
+  margin: 0.5vh;
+  opacity: 0.8;
 }
 
 /*RESULTS*/
