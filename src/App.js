@@ -80,16 +80,7 @@ function App() {
       setchapters(data);
     });
 
-    // console.log(chapArray);
-
-    // let chap = await Promise.all(
-    //    urls.forEach(element => {
-    //     const res =  fetch(element);
-    //     return  res.json();
-    //    })
-    //  )
-
-    // setchapters(chapArray);
+    
   };
 
   /**get chapters */
@@ -120,15 +111,7 @@ function App() {
     getPhotos(page);
   };
 
-  // useEffect(() => {
-  //   getChapters();
-  //   scrollHandle();
-  //   getDimension();
-  //   getChapters();
-  //   return () => {
-  //     console.log("unmount");
-  //   };
-  // }, []);
+  
 
   useEffect(() => {
     scrollHandle();
